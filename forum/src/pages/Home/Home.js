@@ -13,13 +13,14 @@ function Home() {
 
     return (
         <>
-            <HeaderPerfil />
+            <HeaderPerfil titulo={"Questions"}
+            />
 
             <SectionStyle>
-                {/* <Menu />
-                <Card />
+                {<Menu />}
+                {<Card />}
 
-                <Historicos /> */}
+                <Historicos />
 
             </SectionStyle>
 
