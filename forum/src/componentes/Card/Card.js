@@ -16,7 +16,7 @@ function Card() {
   },[])
 
   return (
-    <>
+  <ContainerCardHome>
 
     {
       loading ?(
@@ -42,17 +42,18 @@ function Card() {
                     postId={dado.post_id}
                     comments={dado.comments}
                     autor={dado.created_id}
-                  />
+                    />
                 </EditPost>
               </CardStyle>
             )
           })}
         </ContainerCard>
 
-      ):(<p>Loading</p>)
-    }
+):(<p>Loading</p>)
+}
 
-    </>
+  </ContainerCardHome>
+  
   )
 }
 

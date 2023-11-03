@@ -31,3 +31,19 @@ export const createPost = (title, content, image, hashtag) =>{
         })
     })
 }
+
+export const createComment = (postId, comment) =>{
+    const body = {
+        "postId": postId,
+        "comment": comment
+    }
+
+    axios.post(`${BASE_URL}/comment/create`, body, {headers: {Authorization:token}})
+    .then((response) =>{
+        getPostAll()
+    })
+    .catch((error) => {
+        console.error("Erro ao criar o coementário", error)
+    })
+
+}

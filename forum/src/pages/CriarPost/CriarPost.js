@@ -30,10 +30,24 @@ const CriarPost = () => {
 
   }
 
+  useVerificarToken()
 
   return (
    <>
-   criarpost
+   <HeaderPerfil titulo={"New Question"}/>
+   <ContainerCriarPost>
+      {/* <Menu/> */}
+      <FormStyle onSubmit={criarPostApi}>
+        <InputStyle placeholder="Título" value={title} onChange={(e) => setTitle(e.target.value)} required/>
+        <TextareaStyle placeholder="Conteudo" value={content} onChange={(e) => setContent(e.target.value)} required/>
+        <InputStyle type="text" placeholder="Hashtags" value={hashtag} onChange={(e) => sethashtag(e.target.value)}/>
+        <InputStyle type="text" label="Imagem" placeholder="Digite o endereço de imagem" onChange={(e) => setImage(e.target.value)} />
+
+        <ButtonStyle type="submit">
+          Enviar  
+        </ButtonStyle>
+      </FormStyle>
+   </ContainerCriarPost>
    </>
   );
 };
